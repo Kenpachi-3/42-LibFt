@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:55:58 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/05/28 18:51:01 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/03 15:04:21 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/03 15:04:24 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 #include <stdio.h>
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	
-	size_t i;
+    size_t i;
 
-	if (dest == NULL && src == NULL)
-		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+    i = 0;
+    while (i < n)
+    {
+        if (((unsigned char *)s)[i] == (unsigned char)c)
+            return ((void *)(s + i));
+        i++;
+    }
+    return (NULL);
 }
 /*int main()
 {
-	char src[] = "I love avocados!";
-	char dest[20];
-
-	ft_memcpy(dest, src, sizeof(src));
-	printf("Copied string: %s\n", dest);
-	return 0;
+    char str[] = "Hello, World!";
+    char *result = ft_memchr(str, 'o', sizeof(str));
+    if (result)
+        printf("Character found at position: %ld\n", result - str);
+    else
+        printf("Character not found.\n");
+    return 0;
 }*/

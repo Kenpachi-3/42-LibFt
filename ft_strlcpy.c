@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 13:11:34 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/03 13:11:42 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/03 13:39:23 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/03 13:39:29 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,29 @@
 #include <stdio.h>
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
     size_t i;
 
-    if (dest == NULL && src == NULL)
-        return (NULL);
-    if (dest < src)
+    if (dest == NULL || src == NULL)
+        return (0);
+    i = 0;
+    while (src[i] != '\0' && i + 1 < size)
     {
-        i = 0;
-        while (i < n)
-        {
-            ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-            i++;
-        }
+        dest[i] = src[i];
+        i++;
     }
-    else
-    {
-        i = n;
-        while (i > 0)
-        {
-            i--;
-            ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-        }
-    }
-    return (dest);
+    if (size > 0)
+        dest[i] = '\0';
+    return (strlen(src));
 }
 /*int main()
 {
     char src[] = "I love avocados!";
     char dest[20];
 
-    ft_memmove(dest, src, sizeof(src));
+    size_t result = ft_strlcpy(dest, src, sizeof(dest));
     printf("Copied string: %s\n", dest);
+    printf("Length of source string: %zu\n", result);
     return 0;
 }*/

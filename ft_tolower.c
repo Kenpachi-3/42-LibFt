@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 19:13:02 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/05/24 19:22:37 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/03 15:00:59 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/03 15:01:03 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h>
 #include <stdio.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
+int ft_tolower(int c)
 {
-	if (c>= '0' && c<= '9')
-		return (1);
-	else 
-		return (0);
+    if (c >= 'A' && c <= 'Z')
+        return (c + 32);
+    return (c);
 }
-/*int main()
+/*int main(void)
 {
-	printf("%d", ft_isdigit('t'));
+    char c = 'A';
+    char lower_c = tolower(c);
+    printf("The lowercase of '%c' is '%c'\n", c, lower_c);
+    return 0;
 }*/

@@ -23,7 +23,7 @@ int ft_isalnum(int c)
 
 //if (ft_isdigit(c) || ft_isalpha(c)) this is the same as what is written above... think about using this method too!
 
-int main()
+/*int main()
 {
 	printf("%d", ft_isalnum('o'));
-}
+}*/

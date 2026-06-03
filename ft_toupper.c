@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 19:13:02 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/05/24 19:22:37 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/03 14:58:13 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/03 14:58:18 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h>
 #include <stdio.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
+int ft_toupper(int c)
 {
-	if (c>= '0' && c<= '9')
-		return (1);
-	else 
-		return (0);
+    if (c >= 'a' && c <= 'z')
+        return (c -32);
+    return (c);
 }
-/*int main()
+/*int main (void)
 {
-	printf("%d", ft_isdigit('t'));
+    char c = 'a';
+    char upper_c = ft_toupper(c);
+    printf("The uppercase of '%c' is '%c'\n", c, upper_c);
+    return (0);
 }*/
