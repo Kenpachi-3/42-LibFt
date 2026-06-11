@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 18:17:37 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/11 17:39:18 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/11 16:07:52 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/11 16:20:49 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+void ft_putchar_fd(char c, int fd)
 {
+    write(fd, &c, 1);
+}
 
+/*int main(void)
+{
+    ft_putchar_fd('T', 1);
+    return (0);
+}*/

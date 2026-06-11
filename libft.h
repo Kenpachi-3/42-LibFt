@@ -3,13 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 20:20:55 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/04 20:31:38 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/11 17:27:41 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stddef.h>
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
@@ -34,3 +38,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
+#endif

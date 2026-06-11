@@ -40,8 +40,8 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
     if (size > 0)
         dest[i] = '\0';
     return (ft_strlen(src));
-}
-*/
+}*/
+
 char *ft_strdup(const char *s)
 {
     char *duplicate;
@@ -55,9 +55,9 @@ char *ft_strdup(const char *s)
     return duplicate;
 }
 
-int main()
+/*int main()
 {
-    const char *original = "Hello, World!";
+    const char *original = "I love avocados!";
     char *duplicate;
 
     duplicate = ft_strdup(original);
@@ -72,4 +72,4 @@ int main()
 
     free(duplicate);
     return 0;
-}
+}*/

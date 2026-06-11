@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 18:17:37 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/11 17:39:18 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/11 15:31:40 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/11 15:54:02 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+void ft_putendl_fd(char *s, int fd)
 {
+    if (!s)
+        return ;
+    ft_putstr_fd(s, fd);
+    write(fd, "\n", 1);
+}
 
+/*int main(void)
+{
+    ft_putendl_fd("Hello, World!", 1);
+    return (0);
+}*/

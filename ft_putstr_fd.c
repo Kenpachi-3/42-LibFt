@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 18:17:37 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/11 17:39:18 by ntshuma          ###   ########.fr       */
+/*   Created: 2026/06/11 15:41:18 by ntshuma           #+#    #+#             */
+/*   Updated: 2026/06/11 16:24:53 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
-{
+/* s is string */
 
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+}
+
+/*int main(void)
+{
+	ft_putstr_fd("WHO ARE YOU?!\n", 1);
+	return (0);
+}*/
