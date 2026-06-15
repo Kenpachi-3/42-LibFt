@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 18:44:17 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/04 18:44:22 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/11 17:48:40 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
-
 /*void ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }*/
-
 void *ft_calloc(size_t count, size_t size)
 {
     void *ptr;

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 16:59:56 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/10 17:00:10 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/15 19:20:22 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+//#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
 
-size_t ft_strlen(const char *s)
+/*size_t ft_strlen(const char *s)
 {
 	size_t i;
 
@@ -23,24 +23,7 @@ size_t ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
-
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
-{
-    size_t i;
-
-    if (dest == NULL || src == NULL)
-        return (0);
-    i = 0;
-    while (src[i] != '\0' && i + 1 < size)
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    if (size > 0)
-        dest[i] = '\0';
-    return (strlen(src));
-}
+}*/
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -66,16 +49,16 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return (subbie);
 }
 
-int main()
+/*int main()
 {
     char *s = "Noluthando";
-    unsigned int start = 5;
+    unsigned int start = 4;
     size_t len = 6;
     char *result = ft_substr(s, start, len);
     if (result)
     {
-        printf("%s\n", result);
+        printf("Result %s\n", result);
         free(result);
     }
-    return 0;
-}
+    return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 20:20:55 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/11 17:27:41 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/15 20:36:53 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char    *ft_strrchr(const char *s, int c);
+char    *ft_substr(char const *s, unsigned int start, size_t len)
+char    *ft_strtrim(char const *s1, char const *set)
 int	ft_atoi(const char *str);
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
