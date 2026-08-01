@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntshuma <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 12:55:02 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/05/28 16:53:53 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/16 18:22:35 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char *arr;
+	char	*arr;
 
 	arr = s;
 	i = 0;
@@ -28,9 +27,3 @@ void *ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*int	main()
-{
-	char str []= "hello";
-	printf("%s\n", (unsigned char *)ft_memset(str, 'T', 4));
-}*/
-

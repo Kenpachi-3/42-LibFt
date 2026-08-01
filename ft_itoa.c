@@ -6,22 +6,20 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 18:24:19 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/15 17:32:57 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/16 18:28:52 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <limits.h>
-//#include <stdio.h>
 #include "libft.h"
 #include <stdlib.h>
 
-static int count_digits(long n)
+static int	count_digits(long n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n <= 0)
-			len++;
+		len++;
 	while (n != 0)
 	{
 		n /= 10;
@@ -30,11 +28,11 @@ static int count_digits(long n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int len;
-	char *result;
-	long num;
+	int		len;
+	char	*result;
+	long	num;
 
 	num = n;
 	len = count_digits(num);
@@ -55,30 +53,3 @@ char *ft_itoa(int n)
 	}
 	return (result);
 }
-
-/*int main(void)
-{
-	char *str;
-
-	str = ft_itoa(246);
-	printf("246 : %s\n", str);
-	free(str);
-
-	str = ft_itoa(-135);
-	printf("-135 : %s\n", str);
-	free(str);
-
-	str = ft_itoa(0);
-	printf("0 : %s\n", str);
-	free(str);
-
-	str = ft_itoa(INT_MIN);
-	printf("INT_MIN : %s\n", str);
-	free(str);
-
-	str = ft_itoa(INT_MAX);
-	printf("INT_MAX : %s\n", str);
-	free(str);
-
-	return (0);
-}*/

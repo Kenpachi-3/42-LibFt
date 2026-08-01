@@ -6,14 +6,12 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 15:41:18 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/06/11 16:24:53 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/06/16 18:23:35 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-
-/* s is string */
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -21,9 +19,3 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
-
-/*int main(void)
-{
-	ft_putstr_fd("WHO ARE YOU?!\n", 1);
-	return (0);
-}*/
