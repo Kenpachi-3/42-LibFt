@@ -116,4 +116,4 @@ Functions designed to create, loop through, and clear items inside a singly-link
 | `ft_lstmap` | Creates a fresh list by applying a function to modify an old list. | List Duplication |
 
 ***
-*THE END*
+
